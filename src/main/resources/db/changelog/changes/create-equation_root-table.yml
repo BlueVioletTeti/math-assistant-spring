@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-equation_root-table
+      author: tetiana
+      changes:
+        - createTable:
+            tableName: equation_root
+            columns:
+              - column:
+                  name: equation_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    foreignKeyName: fk_equation_id
+                    references: equation(id)
+              - column:
+                  name: root_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    foreignKeyName: fk_root_id
+                    references: root(id)

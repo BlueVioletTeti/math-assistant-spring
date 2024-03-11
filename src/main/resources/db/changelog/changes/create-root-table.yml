@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-root-table
+      author: tetiana
+      changes:
+        - createTable:
+            tableName: root
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: root
+                  type: double
